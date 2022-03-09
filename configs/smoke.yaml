@@ -1,0 +1,22 @@
+# Tiny config used for a ~1 minute end-to-end smoke test.
+seed: 0
+data:
+  dir: data_smoke
+  n_train: 600
+  n_val: 60
+  n_test: 60
+model:
+  kind: scratch
+  d_model: 64
+  d_kv: 16
+  d_ff: 128
+  num_layers: 2
+  num_heads: 4
+train:
+  output_dir: runs/smoke
+  epochs: 2
+  batch_size: 32
+  val_exec_samples: 20
+eval:
+  n_tables: 2
+  num_beams: 1

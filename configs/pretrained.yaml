@@ -1,0 +1,16 @@
+# Fine-tune pretrained t5-small (needs a one-off download from the Hugging Face Hub; slow on CPU).
+seed: 0
+data:
+  dir: data
+model:
+  kind: pretrained
+  pretrained_name: t5-small
+train:
+  output_dir: runs/t5-small
+  epochs: 3
+  batch_size: 16
+  lr: 0.0005
+  val_exec_samples: 100
+eval:
+  n_tables: 3
+  num_beams: 4

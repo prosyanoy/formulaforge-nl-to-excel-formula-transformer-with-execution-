@@ -1,0 +1,10 @@
+torch>=2.2
+transformers>=4.40
+formulas>=1.2
+pandas>=2.0
+numpy
+pyyaml
+tensorboard
+streamlit
+sentencepiece
+pytest

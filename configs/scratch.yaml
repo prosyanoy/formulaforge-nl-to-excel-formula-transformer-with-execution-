@@ -1,0 +1,23 @@
+# T5 encoder-decoder trained from scratch on the synthetic data (word-level vocabulary).
+seed: 0
+data:
+  dir: data
+  n_train: 40000
+  n_val: 500
+  n_test: 1000
+model:
+  kind: scratch
+  d_model: 128
+  d_kv: 32
+  d_ff: 384
+  num_layers: 3
+  num_heads: 4
+  dropout: 0.1
+train:
+  output_dir: runs/scratch
+  epochs: 8
+  batch_size: 64
+  lr: 0.0015
+eval:
+  n_tables: 3
+  num_beams: 4
